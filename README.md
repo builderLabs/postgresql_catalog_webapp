@@ -21,7 +21,12 @@ the following three documents:
 To replicate this project in its entirety, follow the instructions listed in  
 the guides listed above (documents 1 and 2 - in that order) before cloning this  
 project to your destination repository.  
-
+&emsp;  
+**Pertinent Information:**  
+Server IP address: 50.116.53.185  
+SSH port: 2200  
+Application URL: http://50.116.53.185/
+&emsp;  
 
 ### DESCRIPTION
 
