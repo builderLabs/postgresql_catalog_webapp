@@ -278,4 +278,4 @@ LogLevel warn
 &emsp;  
 &emsp;  
 With the site now fully deployed and functionality enabled, please refer to the  
-instructions in the [README.md]() for app-specific guidance.
+instructions in the [README.md](https://github.com/builderLabs/psql_catalog/blob/master/README.md) for app-specific guidance.
