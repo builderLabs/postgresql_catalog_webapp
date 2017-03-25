@@ -16,7 +16,7 @@ the following three documents:
 
 1). Provisioning and configuration of a Linux server from scratch: [LinuxSrvCfg.md](https://github.com/builderLabs/psql_catalog/blob/master/LinuxSrvCfg.md).  
 2). Configuration and setup of the project on the server: [CatalogCfg.md](https://github.com/builderLabs/psql_catalog/blob/master/CatalogCfg.md).  
-3). Finally, application-specific instructions/guidance: [(this document)]().  
+3). Finally, application-specific instructions/guidance: [(this document)](https://github.com/builderLabs/psql_catalog/blob/master/README.md).  
 
 To replicate this project in its entirety, follow the instructions listed in  
 the guides listed above (documents 1 and 2 - in that order) before cloning this  
