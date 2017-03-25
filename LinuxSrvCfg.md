@@ -88,11 +88,7 @@ C). SELECT REGION:
 &emsp;At this point, you should be presented with a 'Linode Manager' page indicating  
 &emsp;that your machine is being created.  
 
-&emsp;image here
-
 &emsp;Wait until it's created - (watch for the message 'Brand New' after refreshing).  
-
-&emsp;image here
 
 D). SETUP MACHINE IMAGE:
 
@@ -101,8 +97,6 @@ D). SETUP MACHINE IMAGE:
 &emsp;&emsp;&emsp;under Options to the right click the 'Deploy an Image' link.
 
 &emsp;&emsp;&emsp;Select the 64-bit Ubuntu 16.04 LTS distribution
-
-&emsp;&emsp;&emsp;image here
 
 &emsp;2). Choose a strong root password  
 
@@ -130,12 +124,8 @@ punctuation characters
 &emsp;&emsp;and that the root password has been set (we'll need that to login to our  
 &emsp;&emsp;server from the beginning).  
 
-&emsp;&emsp;image here
-
 &emsp;&emsp;The convenient 'Remote Access' tab lists the public ip for our machine  
 &emsp;&emsp;as well as ssh access.  In my case these are:  
-
-&emsp;&emsp;image here  
 
 &emsp;&emsp;SSH Access:  
 
@@ -146,9 +136,8 @@ punctuation characters
 
 &emsp;&emsp;"Powered Off"  
 
-&emsp;&emsp;image here
-
 &emsp;&emsp;Click Boot  
+&emsp;  
 &emsp;&emsp;and 'OK' to confirm.  
 
 &emsp;&emsp;Helpful Guide: https://www.linode.com/docs/getting-started  
@@ -206,7 +195,7 @@ Are you sure you want to continue connecting (yes/no)?
 &emsp;  
 &emsp;&emsp;Immediately after this, you'll be prompted for the root password you setup  
 &emsp;&emsp;during deployment with Linode.  
-&emsp;&emsp;
+&emsp;  
 &emsp;&emsp;Enter that password at the prompt to log in.  
 
 &emsp;&emsp;If you remembered your password correctly, you should now be logged into  
@@ -294,8 +283,8 @@ Is the information correct? [Y/n] Y
 &emsp;  
 &emsp;&emsp;&emsp;Verify your prompt changes from:  
 &emsp;&emsp;&emsp;`root@localhost:~#`  
-         
-&emsp;&emsp; to  
+&emsp;  
+&emsp;&emsp;to:
 &emsp;&emsp;&emsp; `grader@localhost:~$`  
 
 &emsp;6). Now that we have a new superuser profile, we should disable logins from  
@@ -325,9 +314,10 @@ Is the information correct? [Y/n] Y
 &emsp;8). Now exit the new superuser profile:  
 &emsp;&emsp;`exit`
 &emsp;  
-&emsp;&emsp;which will take you back to the 'root' profile.  Let us now exit and  
-&emsp;&emsp;disconnect from the remote server:  
-&emsp;&emsp;`exit`
+&emsp;&emsp;which will take you back to the 'root' profile.  
+&emsp;  
+&emsp;&emsp;Let us now exit and disconnect from the remote server:  
+&emsp;&emsp;`exit`  
 &emsp;  
 
 &emsp;9). Let's now confirm that root login to our server has been disabled.  
@@ -513,16 +503,20 @@ C). REMOVE ATTACK VECTOR: default ssh port log-in
 &emsp;  
 &emsp;6). Re-connect from the client using ssh with non-default port:  
 &emsp;&emsp;`ssh <user>@XX.XX.XXX.XX -i <keyfile> -p <port>`  
+&emsp;  
 &emsp;&emsp;thus:  
 &emsp;&emsp;`ssh grader@50.116.53.185  -i ~/.ssh/id_rsa -p 2200`  
 &emsp;  
 &emsp;&emsp;a). For greater convenience, on your LOCAL machine, add the ssh port to  
 &emsp;&emsp;&emsp;our config file:  
 &emsp;&emsp;&emsp;`vim ~/.ssh/config`  
+&emsp;  
 &emsp;&emsp;&emsp;add the non-default port as follows:  
 &emsp;&emsp;&emsp;`Port=<port>`  
+&emsp;  
 &emsp;&emsp;&emsp; thus  
 &emsp;&emsp;&emsp; `Port=2200`  
+&emsp;  
 &emsp;&emsp;&emsp; save and quit:  
 &emsp;&emsp;&emsp; `:wq`  
 &emsp;  
@@ -536,6 +530,7 @@ Port=2200
 &emsp;&emsp;b). To try out the simpler method, do the following.  
 &emsp;&emsp;&emsp;Quit the remote server (yet again):  
 &emsp;&emsp;&emsp;`exit`  
+&emsp;  
 &emsp;&emsp;&emsp;Now, back on the client, with the ~/.ssh/config file edited to include  
 &emsp;&emsp;&emsp;the port, simply ssh back in again as:  
 &emsp;&emsp;&emsp;`ssh grader@linode1`  
@@ -572,6 +567,7 @@ D). REMOVE ATTACK VECTOR: unauthorized traffic
 &emsp;1). Blank Slate: reign in all traffic  
 &emsp;&emsp;allow ourselves all outgoing traffic:  
 &emsp;&emsp;`sudo ufw default allow outgoing`  
+&emsp;  
 &emsp;&emsp;deny all incoming traffic:  
 &emsp;&emsp;`sudo ufw default deny incoming`  
 &emsp;  
