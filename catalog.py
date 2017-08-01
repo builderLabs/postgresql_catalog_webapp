@@ -473,11 +473,12 @@ def setSubCategory(newItem):
                 newItem.subcategories = session.query(
                     Subcategory).order_by(Subcategory.name).all()
         else:
-            if not newItem.subcategory_custom:
-                if isinstance(request.form['subcategory'],(int)):
+            if not newItem.subcategory_custom:                
+                if request.form['subcategory'].isdigit():                    
                     selected_subcat = session.query(Subcategory)\
                         .filter_by(id=request.form['subcategory']).one()
                 else:
+                    newItem.subcat = request.form['subcategory'];                    
                     selected_subcat = session.query(Subcategory)\
                         .filter_by(name=request.form['subcategory']).one()
                 newItem.selected_subcat = selected_subcat.name
@@ -565,8 +566,8 @@ def setBrand(newItem):
                     Brand).order_by(Brand.name).all()
                 newItem.selected_brand = "Brand:"
     else:
-        if not newItem.brand_custom:
-            if isinstance(request.form['brand'], int):
+        if not newItem.brand_custom:            
+            if request.form['brand'].isdigit():
                 selected_brand = session.query(Brand)\
                     .filter_by(id=request.form['brand']).one()
             else:
@@ -631,8 +632,6 @@ def addInstrumentPost(instrument_id):
 
     newItem = setCategory(newItem)
     newItem = setSubCategory(newItem)
-
-    # return newItem.msg
 
     newItem = setBrand(newItem)
     newItem = setCondition(newItem)
