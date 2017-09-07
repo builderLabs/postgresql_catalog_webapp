@@ -33,7 +33,7 @@ A). INSTALL APACHE2 SERVER:
 You can check to see if apache is serving the default web page by  
 accessing our server and the default http port 80:  
 &emsp;  
-http://50.116.53.185:80  
+http://12.345.67.890:80
 &emsp;  
 If you see the apache welcome page with the words 'It works!' - it's up  
 and running.  
@@ -232,8 +232,8 @@ execfile(activate_this, dict(__file__=activate_this))
 
 ```
 <VirtualHost *:80>  
-ServerName 50.116.53.185  
-ServerAdmin admin@50.116.53.185  
+ServerName 12.345.67.890  
+ServerAdmin admin@12.345.67.890  
 WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages  
 WSGIScriptAlias / /var/www/catalog/psql_catalog/controller.wsgi  
 <Directory /var/www/catalog/psql_catalog/>  
@@ -264,7 +264,7 @@ LogLevel warn
 
 &emsp;&emsp;The site should now be up and running, we can check that in any browser:
 
-&emsp;&emsp;http://50.116.53.185:80
+&emsp;&emsp;http://12.345.67.890:80
 
 &emsp;&emsp;Finally, in order to render the Google sign-in functionality of the  
 &emsp;&emsp;site, we need to add our new server as an authorized host.  
@@ -272,7 +272,7 @@ LogLevel warn
 &emsp;&emsp;in the Google console dashboard.  
 &emsp;  
 &emsp;&emsp;Add our host to the list of authorized origins to avoid the 'origin_mismatch' error:  
-&emsp;&emsp;`http://50.116.53.185`  
+&emsp;&emsp;`http://12.345.67.890`  
 &emsp;  
 &emsp;&emsp;The site should now accept Oauth 2.0 via Google sign-in.  
 &emsp;  

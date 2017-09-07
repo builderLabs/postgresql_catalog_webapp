@@ -9,7 +9,7 @@ performs common database operations.
 This project differs from its SQLite-backed variant in that it incorporates a  
 persistent database and involved procuring a bare-bones Linux server which has  
 been configured from scratch to host the application.  The deployed version of this  
-app can be found [here](http://50.116.53.185/).  
+app can be found [here](http://instrumentgarage.online).  
 
 As a result, instructions for this project *in its entirey* have been created in  
 the following three documents:
@@ -21,12 +21,6 @@ the following three documents:
 To replicate this project in its entirety, follow the instructions listed in  
 the guides listed above (documents 1 and 2 - in that order) before cloning this  
 project to your destination repository.  
-&emsp;  
-**Pertinent Information:**  
-Server IP address: 50.116.53.185  
-SSH port: 2200  
-Application URL: http://50.116.53.185/
-&emsp;  
 
 ### DESCRIPTION
 
